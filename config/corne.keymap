@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#define NUMBERS 2
 #define SYMBOLS 2
 
 / {
@@ -44,9 +45,9 @@
 // |    Z    |    X    |    C    |    V    |    B    |   |    N    |    M     |    ,    |    .    |    /    |
       &kp Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M    &kp COMMA  &kp DOT  &kp FSLH
 
-//                |    29   |    30   |    31   |   |        32       |    33    |    34   |
-//                |   GUI   |   LWR   |   RET   |   |     SPC/SYM     |   RSE    |   ALT   |
-                   &kp LGUI    &mo 1    &kp RET      &lt SPACE SYMBOLS &kp LSHIFT  &kp RALT
+//             |    29   |    30   |       31        |   |        32       |    33    |    34   |
+//             |   GUI   |   RET   |   RET/NUMBERS   |   |     SPC/SYM     |   RSE    |   TAB   |
+                &kp LGUI   &kp RET  &mt SPACE SYMBOLS     &mt SPACE SYMBOLS &kp LSHIFT  &kp TAB
                         >;
                 };
 
