@@ -39,15 +39,15 @@
 
 // |   10    |   11    |   12    |   13    |   14    |   |   15    |   16     |   17    |   18    |   19    |
 // |    A    |    S    |    D    |    F    |    G    |   |    H    |    J     |    K    |    L    |    ;    |
-      &kp A     &kp S     &kp D     &kp F     &kp G         &kp H     &kp J      &kp K     &kp L    &kp SEMI
+   &mt LCTRL A  &kp S     &kp D     &kp F     &kp G         &kp H     &kp J      &kp K     &kp L    &kp SEMI
 
 // |   20    |   21    |   22    |   22    |   23    |   |   24    |   25     |   26    |   27    |   28    |
 // |    Z    |    X    |    C    |    V    |    B    |   |    N    |    M     |    ,    |    .    |    /    |
       &kp Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M    &kp COMMA  &kp DOT  &kp FSLH
 
 //             |    29   |    30   |       31        |   |        32       |    33    |    34   |
-//             |   GUI   |   RET   |   SPC/NUMBERS   |   |  SPC/SYMBOLS    |   RSE    |   TAB   |
-                &kp LGUI   &kp RET  &mt NUMBERS SPACE     &mt SYMBOLS SPACE &kp LSHIFT  &kp TAB
+//             |   GUI   |   RET   |   SPC/SYMBOLS   |   |  SPC/NUMBERS    |   RSE    |   TAB   |
+                &kp LGUI   &kp RET  &mt SYMBOLS SPACE     &mt NUMBERS SPACE &kp LSHIFT  &kp TAB
                         >;
                 };
 
@@ -61,7 +61,7 @@
    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
    &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                                    &kp LGUI     &trans       &kp trans      &kp trans  &trans   &kp RALT
                         >;
                 };
 
