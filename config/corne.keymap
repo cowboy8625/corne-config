@@ -46,8 +46,8 @@
       &kp Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M    &kp COMMA  &kp DOT  &kp FSLH
 
 //             |    29   |    30   |       31        |   |        32       |    33    |    34   |
-//             |   GUI   |   RET   |   RET/NUMBERS   |   |     SPC/SYM     |   RSE    |   TAB   |
-                &kp LGUI   &kp RET  &mt SPACE SYMBOLS     &mt SPACE SYMBOLS &kp LSHIFT  &kp TAB
+//             |   GUI   |   RET   |   SPC/NUMBERS   |   |  SPC/SYMBOLS    |   RSE    |   TAB   |
+                &kp LGUI   &kp RET  &mt NUMBERS SPACE     &mt SYMBOLS SPACE &kp LSHIFT  &kp TAB
                         >;
                 };
 
