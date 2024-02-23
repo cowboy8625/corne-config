@@ -7,13 +7,15 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#define RIGHT 1;
+#define SYMBOLS 2;
 
 / {
 	combos {
 		compatible = "zmk,combos";
 		combo_backspace {
 		    timeout-ms = <50>;
-		    key-positions = <12 13>;
+		    key-positions = <11 12>;
 		    bindings = <&kp BSPC>;
 		};
 		combo_ecs {
@@ -28,16 +30,24 @@
                 default_layer {
                         bindings = <
 // -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
-   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
-// |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
-   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI
-// |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
-   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                  &kp LGUI &mo 1 &kp RET   &kp SPACE &mo 2 &kp RALT
+// |    0    |    1    |    2    |    3    |    4    |   |    5    |    6     |    7    |    8    |    9    |
+// |    Q    |    W    |    E    |    R    |    T    |   |    Y    |    U     |    I    |    O    |    P    |
+      &kp Q     &kp W     &kp E     &kp R     &kp T         &kp Y     &kp U      &kp I     &kp O     &kp P
+
+// |   10    |   11    |   12    |   13    |   14    |   |   15    |   16     |   17    |   18    |   19    |
+// |    A    |    S    |    D    |    F    |    G    |   |    H    |    J     |    K    |    L    |    ;    |
+      &kp A     &kp S     &kp D     &kp F     &kp G         &kp H     &kp J      &kp K     &kp L    &kp SEMI
+
+// |   20    |   21    |   22    |   22    |   23    |   |   24    |   25     |   26    |   27    |   28    |
+// |    Z    |    X    |    C    |    V    |    B    |   |    N    |    M     |    ,    |    .    |    /    |
+      &kp Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M    &kp COMMA  &kp DOT  &kp FSLH
+
+//                |    29   |    30   |    31   |   |        32       |    33    |    34   |
+//                |   GUI   |   LWR   |   RET   |   |     SPC/SYM     |   RSE    |   ALT   |
+                   &kp LGUI    &mo 1    &kp RET      &lt SPACE SYMBOLS &kp LSHIFT  &kp RALT
                         >;
                 };
+
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
