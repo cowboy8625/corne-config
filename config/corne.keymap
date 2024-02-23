@@ -17,12 +17,12 @@
 	combos {
 		compatible = "zmk,combos";
 		combo_backspace {
-		    timeout-ms = <50>;
+		    timeout-ms = <100>;
 		    key-positions = <11 12>; // S and D
 		    bindings = <&kp BSPC>;
 		};
 		combo_ecs {
-		    timeout-ms = <50>;
+		    timeout-ms = <100>;
 		    key-positions = <1 2>;  // W and E
 		    bindings = <&kp ESC>;
 		};
@@ -31,23 +31,28 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+    // Keymap 0: Alpha layer
+    //
+    //
                         bindings = <
-// -----------------------------------------------------------------------------------------
-// |    0    |    1    |    2    |    3    |    4    |   |    5    |    6     |    7    |    8    |    9    |
-// |    Q    |    W    |    E    |    R    |    T    |   |    Y    |    U     |    I    |    O    |    P    |
-      &kp Q     &kp W     &kp E     &kp R     &kp T         &kp Y     &kp U      &kp I     &kp O     &kp P
-
-// |   10    |   11    |   12    |   13    |   14    |   |   15    |   16     |   17    |   18    |   19    |
-// |    A    |    S    |    D    |    F    |    G    |   |    H    |    J     |    K    |    L    |    ;    |
-   &mt LCTRL A  &kp S     &kp D     &kp F     &kp G         &kp H     &kp J      &kp K     &kp L    &kp SEMI
-
-// |   20    |   21    |   22    |   22    |   23    |   |   24    |   25     |   26    |   27    |   28    |
-// |    Z    |    X    |    C    |    V    |    B    |   |    N    |    M     |    ,    |    .    |    /    |
-      &kp Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M    &kp COMMA  &kp DOT  &kp FSLH
-
-//             |    29   |    30   |       31        |   |        32       |    33    |    34   |
-//             |   GUI   |   RET   |   SPC/SYMBOLS   |   |  SPC/NUMBERS    |   RSE    |   TAB   |
-                &kp LGUI   &kp RET  &mt SYMBOLS SPACE     &mt NUMBERS SPACE &kp LSHIFT  &kp TAB
+// ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼╮
+// │     0      │  1  │  2  │  3  │  4  │      │  5  │  6  │  7      │  8    │   9   │
+// │     Q      │  W  │  E  │  R  │  T  │      │  Y  │  U  │  I      │  O    │   P   │
+      &kp Q      &kp W &kp E &kp R &kp T        &kp Y &kp U &kp I     &kp O   &kp P
+// ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼┩      ├⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼┩
+// │   10       │  11 │  12 │  13 │  14 │      │  15 │  16 │  17     │  18   │  19   │
+// │ CTRL A     │  S  │  D  │  F  │  G  │      │  H  │  J  │  K      │  L    │CTRL ; │
+   &mt LCTRL A   &kp S &kp D &kp F &kp G        &kp H &kp J &kp K     &kp L   &kp SEMI
+// ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼┩      ├⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼┩
+// │  20        │  21 │  22 │  23 │  24 │      │  25 │  26 │  27     │  28   │  29   │
+// │ SHFT Z     │  X  │  C  │  V  │  B  │      │  N  │  M  │  ,      │  .    │SHFT / │
+    &mt LSHIFT Z &kp X &kp C &kp V &kp B        &kp N &kp M &kp COMMA &kp DOT &kp FSLH
+// ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼╯      ╰⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼╯
+// ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮   ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
+// │           │         │                 │   │                 │          │         │
+// │ ESC META  │ ENT ALT │ SPC SPE         │   │ SPC NUM         │ SHFT     │ TAB     │
+     &kp LGUI   &kp RET   &mt SYMBOLS SPACE     &mt NUMBERS SPACE &kp LSHIFT  &kp TAB
+// ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯   ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
                         >;
                 };
 
