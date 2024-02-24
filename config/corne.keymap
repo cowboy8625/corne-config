@@ -21,13 +21,18 @@
 		compatible = "zmk,combos";
 		combo_backspace {
 		    timeout-ms = <100>;
-		    key-positions = <11 12>; // S and D
+		    key-positions = <11 12>; // s and d
 		    bindings = <&kp BSPC>;
 		};
 		combo_ecs {
 		    timeout-ms = <100>;
-		    key-positions = <1 2>;  // W and E
+		    key-positions = <1 2>;  // w and e
 		    bindings = <&kp ESC>;
+		};
+		combo_colon {
+		    timeout-ms = <100>;
+		    key-positions = <16 17>;  // j and k
+		    bindings = <&kp COLON>;
 		};
 	};
 
@@ -65,16 +70,26 @@
                 };
 
                 number_layer {
-// -----------------------------------------------------------------------------------------
-// |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
-// | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |
-// |     |     |     |     |     |   |     |     |     |     |     |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-   &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans
-                &trans       &trans       &trans       &trans         &trans   &trans>;
+// ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
+// │     0      │  1   │  2   │  3   │  4   │      │      5      │  6      │  7       │  8       │   9         │
+// │     1      │  2   │  3   │  4   │  5   │      │      6      │  7      │  8       │  9       │   0         │
+      &kp N1     &kp N2 &kp N3 &kp N4 &kp N5           &kp N6      &kp N7    &kp N8     &kp N9     &kp NO
+// ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼┩      ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┩
+// │   10       │  11  │  12  │  13  │  14  │      │  15         │  16     │     17   │    18    │    19       │
+// │   F1       │  F2  │  F3  │  F4  │  F5  │      │  LEFT       │  DOWN   │     UP   │    RIGHT │   VOL UP    │
+    &kp F1       &kp F2 &kp F3 &kp F4 &kp F5         &kp LEFT     &kp DOWN    &kp UP    &kp RIGHT  &kp C_VOL_UP
+// ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼┩      ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┩
+// │     20     │  21  │  22  │  23  │  24  │      │  25         │  26     │  27      │  28      │   29        │
+// │     F6     │  F7  │  F8  │  F9  │  F10 │      │  N          │  M      │  ,       │  .       │  SHFT /     │
+       &kp F6    &kp F7 &kp F8 &kp F9 &kp F10        &trans        &trans    &trans     &trans      &trans
+// ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼╯      ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
+//  ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
+//  │           │         │                 │      │                 │          │         │
+//  │    F11    │   F12   │      SPC SPE    │      │ SPC NUM         │ SHFT     │ TAB     │
+      &kp F11      &kp F12   &kp SPACE               &trans            &kp PLAY   &kp SKIP
+//  ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯      ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
+                                          >;
                 };
 
                 symbol_layer {
