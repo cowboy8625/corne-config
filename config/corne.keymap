@@ -81,11 +81,6 @@
 		    key-positions = <26 27>;  // m and ,
 		    bindings = <&kp UNDERSCORE>;
 		};
-		combo_greater {
-		    timeout-ms = <COMBO_DELAY>;
-		    key-positions = <26 27>;  // h and j
-		    bindings = <&kp GREATER>;
-		};
 	};
 
 	conditional_layers {
