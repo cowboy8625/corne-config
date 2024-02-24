@@ -33,7 +33,7 @@
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
 		blue_tooth {
-		if-layer = <NUMBERS SYMBOLS>;
+		if-layers = <NUMBERS SYMBOLS>;
 		then-layer = <BLUE_TOOTH_LAYER>;
 		};
 	};
