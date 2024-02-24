@@ -9,8 +9,8 @@
 #define SYMBOLS 2
 #define BLUE_TOOTH_LAYER 3
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+// #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
+// #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 
 //&mmv {
@@ -61,24 +61,24 @@
 
                 default_layer {
                         bindings = <
-// ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼╮
-// │     0      │  1  │  2  │  3  │  4  │      │  5  │  6  │  7      │  8    │   9   │
-// │     Q      │  W  │  E  │  R  │  T  │      │  Y  │  U  │  I      │  O    │   P   │
-      &kp Q      &kp W &kp E &kp R &kp T        &kp Y &kp U &kp I     &kp O   &kp P
-// ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼┩      ├⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼┩
-// │   10       │  11 │  12 │  13 │  14 │      │  15 │  16 │  17     │  18   │  19   │
-// │ CTRL A     │  S  │  D  │  F  │  G  │      │  H  │  J  │  K      │  L    │CTRL ; │
-   &mt LCTRL A   &kp S &kp D &kp F &kp G        &kp H &kp J &kp K     &kp L   &kp SEMI
-// ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼┩      ├⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼┩
-// │  20        │  21 │  22 │  23 │  24 │      │  25 │  26 │  27     │  28   │  29   │
-// │ SHFT Z     │  X  │  C  │  V  │  B  │      │  N  │  M  │  ,      │  .    │SHFT / │
-    &mt LSHIFT Z &kp X &kp C &kp V &kp B        &kp N &kp M &kp COMMA &kp DOT &kp FSLH
-// ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼╯      ╰⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼╯
-// ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮   ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
-// │           │         │                 │   │                 │          │         │
-// │ ESC META  │ ENT ALT │ SPC SPE         │   │ SPC NUM         │ SHFT     │ TAB     │
-     &kp LGUI   &kp RET   &lt SYMBOLS SPACE     &lt NUMBERS SPACE &kp LSHIFT  &kp TAB
-// ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯   ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
+//       ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼╮   ╭⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
+//       │      0     │  1  │  2  │  3  │  4  │   │  5  │  6  │    7    │  8    │       9       │
+//       │      Q     │  W  │  E  │  R  │  T  │   │  Y  │  U  │    I    │  O    │       P       │
+             &kp Q      &kp W &kp E &kp R &kp T     &kp Y &kp U   &kp I   &kp O       &kp P
+//       ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼┩   ├⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┩
+//       │     10     │  11 │  12 │  13 │  14 │   │  15 │  16 │   17    │  18   │      19       │
+//       │   CTRL A   │  S  │  D  │  F  │  G  │   │  H  │  J  │    K    │  L    │    CTRL ;     │
+          &mt LCTRL A  &kp S &kp D &kp F &kp G     &kp H &kp J   &kp K    &kp L   &mt LCTRL SEMI
+//       ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼┩   ├⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┩
+//       │    20      │  21 │  22 │  23 │  24 │   │  25 │  26 │   27    │  28   │      29       │
+//       │   SHFT Z   │  X  │  C  │  V  │  B  │   │  N  │  M  │    ,    │  .    │    SHFT /     │
+          &mt LSHIFT Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &mt LSHIFT FSLH
+//       ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼╯   ╰⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
+// ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮   ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
+// │           │            │                 │   │                 │          │         │
+// │   META    │ ENT ALT    │   SPC SPE       │   │    SPC NUM      │ SHFT     │ TAB     │
+     &kp LGUI   &mt LALT RET &lt SYMBOLS SPACE     &lt NUMBERS SPACE &kp LSHIFT  &kp TAB
+// ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯   ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
                         >;
                 };
 
@@ -108,15 +108,26 @@
 
                 symbol_layer {
 // -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |
-// |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |
-//                   | GUI |     |SPC|     | ENT |     | ALT |
                         bindings = <
-   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
-   &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH
-   &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE
-                   &trans   &trans   &trans      &trans    &trans    &trans>;
+// ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
+// │     0     │    1    │  2     │  3     │  4     │      │   5     │    6     │   7     │  8       │     9   │
+// │     !     │    @    │  {     │  }     │  |     │      │   `     │    ~     │   "     │          │         │
+     &kp EXCL     &kp AT  &kp LBRC &kp RBRC &kp PIPE        &kp GRAVE &kp TILDE  &kp DQT   &trans     &kp RPAR
+// ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼┩      ├⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼┩
+// │   10      │  11     │  12    │  13    │  14    │      │   15    │    16    │   17    │  18      │    19   │
+// │   #       │   $     │  (     │  )     │        │      │   +     │    -     │   /     │   *      │         │
+    &kp HASH    &kp DLLR  &kp LPAR &kp RPAR &trans          &kp PLUS  &kp MINUS  &kp BSLH  &kp STAR   &trans
+// ├⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼┩      ├⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼⎼⎼┩
+// │     20    │  21     │  22    │  23    │  24    │      │   25    │    26    │   27    │    28    │   29    │
+// │     %     │   ^     │   [    │   ]    │        │      │   &     │    =     │   ,     │     .    │         │
+     &kp PRCNT  &kp CARET &kp LBKT &kp RBKT &trans          &kp AMPS  &kp EQUAL  &kp COMMA   &kp DOT  &trans
+// ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼╯      ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
+//          ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
+//          │           │         │                 │      │                 │            │         │
+//          │           │   ;     │                 │      │       SPC       │     :      │         │
+              &trans      &kp SEMI     &trans                   &kp SPACE      &kp COLON    &trans
+//          ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯      ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
+		   >;
                 };
 
                 blue_tooth_layer {
