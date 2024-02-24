@@ -9,6 +9,8 @@
 #define SYMBOLS 2
 #define BLUE_TOOTH_LAYER 3
 
+#define COMBO_DELAY 150
+
 // #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
 // #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
@@ -30,27 +32,54 @@
 	chosen {
 		zmk,matrix-transform = &five_column_transform;
 	};
+    // Combomap
+    //
+    // ╭⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼╮
+    // │       │    ESC    │     │     │      │     │    ESC    │     \       │
+    // ├⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼┩      ├⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼┩
+    // │       │BackSpace Tab    │     │      │     <     :     >     │       │
+    // ├⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼RMB⎼╃⎼LMB⎼┩      ├ENTER╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼┩
+    // │       │     -   ENTER   │     │      │     '     _     │     │       │
+    // ╰⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼╯      ╰⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼╯
+    //            ╭⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼╮            ╭⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼╮
+    //            │     │     │     │            │     │     │     │
+    //            ╰⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼╯            ╰⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼╯
 	combos {
 		compatible = "zmk,combos";
 		combo_backspace {
-		    timeout-ms = <100>;
+		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <11 12>; // s and d
 		    bindings = <&kp BSPC>;
 		};
 		combo_ecs {
-		    timeout-ms = <100>;
+		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <1 2>;  // w and e
 		    bindings = <&kp ESC>;
 		};
+		combo_greater {
+		    timeout-ms = <COMBO_DELAY>;
+		    key-positions = <15 16>;  // h and j
+		    bindings = <&kp GREATER>;
+		};
 		combo_colon {
-		    timeout-ms = <100>;
+		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <16 17>;  // j and k
 		    bindings = <&kp COLON>;
 		};
+		combo_greater {
+		    timeout-ms = <COMBO_DELAY>;
+		    key-positions = <17 18>;  // k and l
+		    bindings = <&kp GREATER>;
+		};
 		combo_underscore {
-		    timeout-ms = <100>;
+		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <26 27>;  // m and ,
 		    bindings = <&kp UNDERSCORE>;
+		};
+		combo_greater {
+		    timeout-ms = <COMBO_DELAY>;
+		    key-positions = <26 27>;  // h and j
+		    bindings = <&kp GREATER>;
 		};
 	};
 
