@@ -41,10 +41,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-    // Keymap 0: Alpha layer
-    //
-    //
-                        default_layer = <
+                        bindings = <
 // ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼╮
 // │     0      │  1  │  2  │  3  │  4  │      │  5  │  6  │  7      │  8    │   9   │
 // │     Q      │  W  │  E  │  R  │  T  │      │  Y  │  U  │  I      │  O    │   P   │
@@ -93,13 +90,14 @@
                 &kp LGUI   &kp RET  &mt SYMBOLS SPACE     &mt NUMBERS SPACE &kp LSHIFT  &kp TAB
                         >;
                 };
+
                 blue_tooth_layer {
+// -----------------------------------------------------------------------------------------
                         bindings = <
    &trans &trans &trans &trans     &bt BT_SEL 0      &trans &trans &trans &trans &trans
    &trans &trans &trans &trans     &bt BT_SEL 1      &trans &trans &trans &trans &trans
    &trans &trans &trans &bt BT_CLR &bt BT_SEL 2      &trans &trans &trans &trans &trans
-                &kp LGUI   &kp RET  &mt SYMBOLS SPACE     &mt NUMBERS SPACE &kp LSHIFT  &kp TAB
-                        >;
+                 &trans &trans     &trans            &trans &trans &trans>;
 		};
         };
 };
