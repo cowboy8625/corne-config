@@ -47,6 +47,11 @@
 		    key-positions = <16 17>;  // j and k
 		    bindings = <&kp COLON>;
 		};
+		combo_underscore {
+		    timeout-ms = <100>;
+		    key-positions = <26 27>;  // m and ,
+		    bindings = <&kp UNDERSCORE>;
+		};
 	};
 
 	conditional_layers {
