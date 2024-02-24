@@ -61,20 +61,20 @@
 		    key-positions = <1 2>;  // w and e
 		    bindings = <&kp ESC>;
 		};
-		combo_greater_than {
+		combo_less_than {
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <15 16>;  // h and j
-		    bindings = <&kp GT>;
+		    bindings = <&kp LT>;
 		};
 		combo_colon {
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <16 17>;  // j and k
 		    bindings = <&kp COLON>;
 		};
-		combo_less_than {
+		combo_greater_than {
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <17 18>;  // k and l
-		    bindings = <&kp LT>;
+		    bindings = <&kp GT>;
 		};
 		combo_underscore {
 		    timeout-ms = <COMBO_DELAY>;
