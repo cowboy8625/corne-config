@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+
 #define DEFAULT 0
 #define NUMBERS 1
 #define SYMBOLS 2
@@ -58,7 +59,7 @@
 // ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮   ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
 // │           │         │                 │   │                 │          │         │
 // │ ESC META  │ ENT ALT │ SPC SPE         │   │ SPC NUM         │ SHFT     │ TAB     │
-     &kp LGUI   &kp RET   &mt SYMBOLS SPACE     &mt NUMBERS SPACE &kp LSHIFT  &kp TAB
+     &kp LGUI   &kp RET   &lt SYMBOLS SPACE     &lt NUMBERS SPACE &kp LSHIFT  &kp TAB
 // ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯   ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
                         >;
                 };
