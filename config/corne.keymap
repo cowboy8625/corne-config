@@ -7,8 +7,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#define NUMBERS 2
+#define DEFAULT 0
+#define NUMBERS 1
 #define SYMBOLS 2
+#define BLUE_TOOTH_LAYER 3
 
 / {
 	chosen {
@@ -27,6 +29,14 @@
 		    bindings = <&kp ESC>;
 		};
 	};
+
+	conditional_layers {
+		compatible = "zmk,conditional-layers";
+		blue_tooth {
+		if-layer = <NUMBERS SYMBOLS>;
+		then-layer = <BLUE_TOOTH_LAYER>;
+		};
+	};
         keymap {
                 compatible = "zmk,keymap";
 
@@ -34,7 +44,7 @@
     // Keymap 0: Alpha layer
     //
     //
-                        bindings = <
+                        default_layer = <
 // ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼╮
 // │     0      │  1  │  2  │  3  │  4  │      │  5  │  6  │  7      │  8    │   9   │
 // │     Q      │  W  │  E  │  R  │  T  │      │  Y  │  U  │  I      │  O    │   P   │
@@ -56,7 +66,7 @@
                         >;
                 };
 
-                lower_layer {
+                number_layer {
 // -----------------------------------------------------------------------------------------
 // |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
 // | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |
@@ -70,7 +80,7 @@
                         >;
                 };
 
-                raise_layer {
+                symbols_layer {
 // -----------------------------------------------------------------------------------------
 // |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
 // |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |
@@ -83,5 +93,13 @@
                 &kp LGUI   &kp RET  &mt SYMBOLS SPACE     &mt NUMBERS SPACE &kp LSHIFT  &kp TAB
                         >;
                 };
+                blue_tooth_layer {
+                        bindings = <
+   &trans &trans &trans &trans     &bt BT_SEL 0      &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans     &bt BT_SEL 1      &trans &trans &trans &trans &trans
+   &trans &trans &trans &bt BT_CLR &bt BT_SEL 2      &trans &trans &trans &trans &trans
+                &kp LGUI   &kp RET  &mt SYMBOLS SPACE     &mt NUMBERS SPACE &kp LSHIFT  &kp TAB
+                        >;
+		};
         };
 };
