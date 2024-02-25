@@ -7,6 +7,8 @@
 #define DEFAULT 0
 #define NUMBERS 1
 #define SYMBOLS 2
+#define GAMEPAD 3
+
 #define BLUE_TOOTH_LAYER 3
 
 #define COMBO_DELAY 150
@@ -50,36 +52,43 @@
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <8 9>; // o and p
 		    bindings = <&kp BSLH>;
+		    layers = <DEFAULT>
 		};
 		combo_backspace {
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <11 12>; // s and d
 		    bindings = <&kp BSPC>;
+		    layers = <DEFAULT>
 		};
 		combo_ecs {
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <1 2>;  // w and e
 		    bindings = <&kp ESC>;
+		    layers = <DEFAULT>
 		};
 		combo_less_than {
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <15 16>;  // h and j
 		    bindings = <&kp LT>;
+		    layers = <DEFAULT>
 		};
 		combo_colon {
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <16 17>;  // j and k
 		    bindings = <&kp COLON>;
+		    layers = <DEFAULT>
 		};
 		combo_greater_than {
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <17 18>;  // k and l
 		    bindings = <&kp GT>;
+		    layers = <DEFAULT>
 		};
 		combo_underscore {
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <26 27>;  // m and ,
 		    bindings = <&kp UNDERSCORE>;
+		    layers = <DEFAULT>
 		};
 	};
 
@@ -166,11 +175,32 @@
 
                 blue_tooth_layer {
 // -----------------------------------------------------------------------------------------
-                        bindings = <
+                   bindings = <
    &trans &trans &trans &trans     &bt BT_SEL 0      &trans &trans &trans &trans &trans
    &trans &trans &trans &trans     &bt BT_SEL 1      &trans &trans &trans &trans &trans
    &trans &trans &trans &bt BT_CLR &bt BT_SEL 2      &trans &trans &trans &trans &trans
                  &trans &trans     &trans            &trans &trans &trans>;
+		};
+		gamepad_layer {
+// -----------------------------------------------------------------------------------------
+// Keymap 3: Game Layer
+//
+// ╭⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼╮
+// │  ESC  │  Q  │  W  │  E  │  R  │      │  F1 │  F2 │  F3 │  F4 │   F5  │
+// ├⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼┩      ├⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼┩
+// │ SHIFT │  A  │  S  │  D  │  F  │      │ F11 │  G  │  B  │     │       │
+// ├⎼⎼⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼┩      ├⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼╃⎼⎼⎼⎼⎼⎼⎼┩
+// │ CTRL  │     │     │     │  C  │      │  L  │  O  │     │     │       │
+// ╰⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼╯      ╰⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼╯
+//            ╭⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼╮           ╭⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
+//            │ ESC │ TAB │ SPC │           │     │     │ ToggleGame │
+//            ╰⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼╯           ╰⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
+		    bindings = <
+   &kp ESC    &kp Q &kp W &kp E &kp R        &kp F1  &kp F2 &kp F3 &kp F4 &kp F5
+   &kp LSHIFT &kp A &kp S &kp D &kp F        &kp F11 &kp G  &kp B  &none &none
+   &kp LCTRL  &none &none &none &kp C        &kp L   &kp O  &none &none &none
+            &kp ESC &kp TAB &kp SPACE        &none   &none  &kp DEFAULT
+		    >;
 		};
         };
 };
