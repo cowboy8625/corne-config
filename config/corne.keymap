@@ -92,19 +92,25 @@
 		};
 		combo_gamepad_layer {
 		    timeout-ms = <COMBO_DELAY>;
-		    key-positions = <5 6 7 8>;  // yuio
-		    bindings = <&tog GAMEPAD>;
+		    key-positions = <5 6 7 8 9>;  // yuiop
+		    bindings = <&to GAMEPAD>;
 		    layers = <DEFAULT GAMEPAD>;
+		};
+		combo_gamepad_layer {
+		    timeout-ms = <COMBO_DELAY>;
+		    key-positions = <15 16 17 18 19>;  // hjkl;
+		    bindings = <&to BlUE_TOOTH_LAYER>;
+		    layers = <DEFAULT BlUE_TOOTH_LAYER>;
 		};
 	};
 
-	conditional_layers {
-		compatible = "zmk,conditional-layers";
-		blue_tooth {
-		if-layers = <NUMBERS SYMBOLS>;
-		then-layer = <BLUE_TOOTH_LAYER>;
-		};
-	};
+	// conditional_layers {
+	// 	compatible = "zmk,conditional-layers";
+	// 	blue_tooth {
+	// 	if-layers = <NUMBERS SYMBOLS>;
+	// 	then-layer = <BLUE_TOOTH_LAYER>;
+	// 	};
+	// };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -182,10 +188,10 @@
                 blue_tooth_layer {
 // -----------------------------------------------------------------------------------------
                    bindings = <
-   &trans &trans &trans &trans     &bt BT_SEL 0      &tog GAMEPAD &trans &trans &trans &trans
-   &trans &trans &trans &trans     &bt BT_SEL 1      &trans       &trans &trans &trans &trans
-   &trans &trans &trans &bt BT_CLR &bt BT_SEL 2      &trans       &trans &trans &trans &trans
-                 &trans &trans     &trans            &trans       &trans &trans>;
+   &trans &trans &trans &trans     &bt BT_SEL 0      &to DEFAULT &trans &trans &trans &trans
+   &trans &trans &trans &trans     &bt BT_SEL 1      &kp Z       &trans &trans &trans &trans
+   &trans &trans &trans &bt BT_CLR &bt BT_SEL 2      &trans      &trans &trans &trans &trans
+                 &trans &trans     &trans            &trans      &trans &trans>;
 		};
 		gamepad_layer {
 // -----------------------------------------------------------------------------------------
@@ -205,7 +211,7 @@
    &kp ESC    &kp Q &kp W &kp E &kp R        &kp F1  &kp F2 &kp F3 &kp F4 &kp F5
    &kp LSHIFT &kp A &kp S &kp D &kp F        &kp F11 &kp G  &kp B  &none &none
    &kp LCTRL  &none &none &none &kp C        &kp L   &kp O  &none &none &none
-            &kp ESC &kp TAB &kp SPACE        &none   &none  &tog DEFAULT
+            &kp ESC &kp TAB &kp SPACE        &none   &none  &to DEFAULT
 		    >;
 		};
         };
