@@ -96,7 +96,7 @@
 		    bindings = <&to GAMEPAD>;
 		    layers = <DEFAULT GAMEPAD>;
 		};
-		combo_gamepad_layer {
+		combo_blue_tooth_layer {
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <15 16 17 18 19>;  // hjkl;
 		    bindings = <&to BlUE_TOOTH_LAYER>;
