@@ -99,8 +99,8 @@
 		combo_blue_tooth_layer {
 		    timeout-ms = <COMBO_DELAY>;
 		    key-positions = <15 16 17 18 19>;  // hjkl;
-		    bindings = <&to BlUE_TOOTH_LAYER>;
-		    layers = <DEFAULT BlUE_TOOTH_LAYER>;
+		    bindings = <&to BLUE_TOOTH_LAYER>;
+		    layers = <DEFAULT BLUE_TOOTH_LAYER>;
 		};
 	};
 
