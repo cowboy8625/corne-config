@@ -199,7 +199,7 @@
    &kp ESC    &kp Q &kp W &kp E &kp R        &kp F1  &kp F2 &kp F3 &kp F4 &kp F5
    &kp LSHIFT &kp A &kp S &kp D &kp F        &kp F11 &kp G  &kp B  &none &none
    &kp LCTRL  &none &none &none &kp C        &kp L   &kp O  &none &none &none
-            &kp ESC &kp TAB &kp SPACE        &none   &none  &to DEFAULT
+            &kp ESC &kp TAB &kp SPACE        &none   &none  &tog DEFAULT
 		    >;
 		};
         };
