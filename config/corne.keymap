@@ -90,18 +90,18 @@
 		    bindings = <&kp UNDERSCORE>;
 		    layers = <DEFAULT>;
 		};
-		// combo_gamepad_layer {
-		//     timeout-ms = <COMBO_DELAY>;
-		//     key-positions = <5 6 7 8 9>;  // yuiop
-		//     bindings = <&to GAMEPAD>;
-		//     layers = <DEFAULT GAMEPAD>;
-		// };
-		// combo_blue_tooth_layer {
-		//     timeout-ms = <COMBO_DELAY>;
-		//     key-positions = <15 16 17 18 19>;  // hjkl;
-		//     bindings = <&to BLUE_TOOTH_LAYER>;
-		//     layers = <DEFAULT BLUE_TOOTH_LAYER>;
-		// };
+		combo_gamepad_layer {
+		    timeout-ms = <COMBO_DELAY>;
+		    key-positions = <5 6 7 8 9>;  // yuiop
+		    bindings = <&to GAMEPAD>;
+		    layers = <DEFAULT GAMEPAD>;
+		};
+		combo_blue_tooth_layer {
+		    timeout-ms = <COMBO_DELAY>;
+		    key-positions = <15 16 17 18 19>;  // hjkl;
+		    bindings = <&to BLUE_TOOTH_LAYER>;
+		    layers = <DEFAULT BLUE_TOOTH_LAYER>;
+		};
 	};
 
 	conditional_layers {
@@ -132,7 +132,7 @@
 // ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮   ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
 // │           │            │                 │   │                 │          │         │
 // │   META    │ ENT ALT    │   SPC SPE       │   │    SPC NUM      │ SHFT     │ TAB     │
-     &kp LGUI   &mt LALT RET &mt SYMBOLS SPACE     &mt NUMBERS SPACE &kp LSHIFT  &kp TAB
+     &kp LGUI   &mt LALT RET &lt SYMBOLS SPACE     &lt NUMBERS SPACE &kp LSHIFT  &kp TAB
 // ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯   ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
                         >;
                 };
@@ -156,7 +156,7 @@
 //  ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
 //  │           │         │                 │      │                 │            │         │
 //  │    F11    │   F12   │      SPC SPE    │      │ SPC NUM         │ Play/Pause │         │
-      &kp F11     &kp F12  &trans                    &trans            &kp C_PP    &trans
+      &kp F11     &kp F12  &trans                    &trans            &kp C_PP    &to BLUE_TOOTH_LAYER
 //  ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯      ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
                                           >;
                 };
