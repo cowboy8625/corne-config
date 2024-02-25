@@ -90,12 +90,6 @@
 		    bindings = <&kp UNDERSCORE>;
 		    layers = <DEFAULT>;
 		};
-		combo_underscore {
-		    timeout-ms = <COMBO_DELAY>;
-		    key-positions = <26 27>;  // m and ,
-		    bindings = <&kp UNDERSCORE>;
-		    layers = <DEFAULT>;
-		};
 	};
 
 	conditional_layers {
