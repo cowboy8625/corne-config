@@ -7,9 +7,8 @@
 #define DEFAULT 0
 #define NUMBERS 1
 #define SYMBOLS 2
-#define GAMEPAD 3
-
 #define BLUE_TOOTH_LAYER 3
+#define GAMEPAD 4
 
 #define COMBO_DELAY 150
 
@@ -90,27 +89,28 @@
 		    bindings = <&kp UNDERSCORE>;
 		    layers = <DEFAULT>;
 		};
-		combo_gamepad_layer {
-		    timeout-ms = <COMBO_DELAY>;
-		    key-positions = <5 6 7 8 9>;  // yuiop
-		    bindings = <&to GAMEPAD>;
-		    layers = <DEFAULT GAMEPAD>;
-		};
-		combo_blue_tooth_layer {
-		    timeout-ms = <COMBO_DELAY>;
-		    key-positions = <15 16 17 18 19>;  // hjkl;
-		    bindings = <&to BLUE_TOOTH_LAYER>;
-		    layers = <DEFAULT BLUE_TOOTH_LAYER>;
-		};
+		// combo_gamepad_layer {
+		//     timeout-ms = <COMBO_DELAY>;
+		//     key-positions = <5 6 7 8 9>;  // yuiop
+		//     bindings = <&to GAMEPAD>;
+		//     layers = <DEFAULT GAMEPAD>;
+		// };
+		// combo_blue_tooth_layer {
+		//     timeout-ms = <COMBO_DELAY>;
+		//     key-positions = <15 16 17 18 19>;  // hjkl;
+		//     bindings = <&to BLUE_TOOTH_LAYER>;
+		//     layers = <DEFAULT BLUE_TOOTH_LAYER>;
+		// };
 	};
 
-	conditional_layers {
-		compatible = "zmk,conditional-layers";
-		blue_tooth {
-		if-layers = <NUMBERS SYMBOLS>;
-		then-layer = <BLUE_TOOTH_LAYER>;
-		};
-	};
+	// conditional_layers {
+	// 	compatible = "zmk,conditional-layers";
+	// 	blue_tooth {
+	// 	if-layers = <NUMBERS SYMBOLS>;
+	// 	then-layer = <BLUE_TOOTH_LAYER>;
+	// 	};
+	// };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -180,7 +180,7 @@
 //          ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╮      ╭⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┱⎼⎼⎼⎼⎼⎼⎼⎼⎼╮
 //          │           │         │                 │      │                 │            │         │
 //          │           │   ;     │                 │      │    SPC NUM      │     :      │         │
-              &trans      &kp SEMI     &trans               &trans              &kp COLON    &trans
+             &to GAMEPAD &kp SEMI     &trans                     &trans        &kp COLON    &trans
 //          ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼╯      ╰⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼┵⎼⎼⎼⎼⎼⎼⎼⎼⎼╯
 		   >;
                 };
@@ -188,9 +188,9 @@
                 blue_tooth_layer {
 // -----------------------------------------------------------------------------------------
                    bindings = <
-   &trans &trans &trans &trans     &bt BT_SEL 0      &to DEFAULT &trans &trans &trans &trans
-   &trans &trans &trans &trans     &bt BT_SEL 1      &kp Z       &trans &trans &trans &trans
-   &trans &trans &trans &bt BT_CLR &bt BT_SEL 2      &trans      &trans &trans &trans &trans
+   &trans &trans &trans &trans     &bt BT_SEL 0      &to GAMEPAD &trans &trans &trans &trans
+   &trans &trans &trans &trans     &bt BT_SEL 1      &to DEFAULT &trans &trans &trans &trans
+   &trans &trans &trans &bt BT_CLR &bt BT_SEL 2      &kp Z       &trans &trans &trans &trans
                  &trans &trans     &trans            &trans      &trans &trans>;
 		};
 		gamepad_layer {
