@@ -158,10 +158,10 @@
                 blue_tooth_layer {
 // -----------------------------------------------------------------------------------------
                    bindings = <
-   &trans &trans &trans &trans     &bt BT_SEL 0      &to GAMEPAD &trans &trans &trans &trans
-   &trans &trans &trans &trans     &bt BT_SEL 1      &to DEFAULT &trans &trans &trans &trans
-   &trans &trans &trans &bt BT_CLR &bt BT_SEL 2      &kp Z       &trans &trans &trans &trans
-                 &trans &trans     &trans            &trans      &trans &trans>;
+   &trans &trans &trans &trans         &bt BT_SEL 0      &to GAMEPAD &trans &trans &trans &trans
+   &trans &trans &trans &bt BT_CLR_ALL &bt BT_SEL 1      &to DEFAULT &trans &trans &trans &trans
+   &trans &trans &trans &bt BT_CLR     &bt BT_SEL 2      &kp Z       &trans &trans &trans &trans
+                 &trans &trans         &trans            &trans      &trans &trans>;
 		};
 		gamepad_layer {
 // -----------------------------------------------------------------------------------------
